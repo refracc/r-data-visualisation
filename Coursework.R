@@ -18,3 +18,7 @@ print(relationship1)
 # Definite relationship plot
 relationship2 <- ggplot(data[data$Height < 100, ], aes(x=Wind.Direction, y=Height, fill=Gender)) + geom_boxplot() + facet_wrap(~Group) + xlab("Wind Direction") + ylab("Height (meters)") + labs(title = "Relationship - Wind Direction & Height")
 print(relationship2)
+
+# Definite relationship plot
+relationship3 <- ggplot(data, aes(x=Score.1, y=Score.2, fill=Wind.Direction)) + geom_boxplot() + facet_grid(Gender~Group)
+print(relationship3)
